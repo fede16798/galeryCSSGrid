@@ -31,7 +31,21 @@ h1 {
 
 .footer__li a {
     text-decoration: none;
-    color: #fff;
+    color: #f2f2f2;
+}
+
+.footer__li {
+    padding-bottom: .5rem;
+
+    background-image: linear-gradient(#f2f2f2, #f2f2f2);
+    background-position: 0% 80%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.footer__li:hover, .footer__li:focus {
+    background-size: 100% 2px;
 }
 
 /*-----------------GALERIA----------------------------*/
@@ -53,11 +67,14 @@ body img {
     width: 100%;
     object-fit: cover;
 
-    filter: blur(2) !important;
+    filter: blur(1px);
+    transition: transform .3s;
 }
 
 img:hover {
     filter: blur(0.0);
+    transform: scale(1.10);
+    z-index: 100;
 }
 
 img:first-child {
